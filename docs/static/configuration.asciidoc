@@ -913,7 +913,7 @@ Now, run Logstash with the -f flag to pass in the configuration file:
 
 [source,js]
 ----------------------------------
-bin/logstash -f logstash-apache.conf
+bin\logstash -f logstash-apache.conf
 ----------------------------------
 
 Now you should see your apache log data in Elasticsearch! Logstash opened and read the specified input file, processing each event it encountered. Any additional lines logged to this file will also be captured, processed by Logstash as events, and stored in Elasticsearch. As an added bonus, they are stashed with the field "type" set to "apache_access" (this is done by the type => "apache_access" line in the input configuration).
@@ -1037,7 +1037,7 @@ Run Logstash with this new configuration:
 
 [source,ruby]
 ----------------------------------
-bin/logstash -f logstash-syslog.conf
+bin\logstash -f logstash-syslog.conf
 ----------------------------------
 
 Normally, a client machine would connect to the Logstash instance on port 5000 and send its message. For this example, we'll just telnet to Logstash and enter a log line (similar to how we entered log lines into STDIN earlier). Open another shell window to interact with the Logstash syslog input and enter the following command:
